@@ -16,7 +16,7 @@
 
 	<welcome-file-list>
 
-		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>RegisterUser.jsp</welcome-file>
 
 	</welcome-file-list>
   <!-- Standard Action Servlet Configuration -->
@@ -47,7 +47,7 @@
 
 		<servlet-name>action</servlet-name>
 
-		<url-pattern>*.lycka</url-pattern>
+		<url-pattern>*.do</url-pattern>
 
 	</servlet-mapping>
 </web-app>

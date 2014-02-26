@@ -16,7 +16,21 @@ public class UserForm extends ValidatorForm{
 	String pwd;
 	String pwd2;
 	String email;
+	String telephone;
+	String compteb;
 
+	public String getTelephone() {
+		return telephone;
+	}
+	public void setTelephone(String telephone) {
+		this.telephone = telephone;
+	}
+	public String getCompteb() {
+		return compteb;
+	}
+	public void setCompteb(String compteb) {
+		this.compteb = compteb;
+	}
 	public String getUsername() {
 		return username;
 	}

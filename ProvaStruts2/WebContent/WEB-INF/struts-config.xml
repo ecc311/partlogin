@@ -27,6 +27,7 @@
 			input="/RegisterUser.jsp">
 
 			<forward name="success" path="/ThanksYou.jsp" />
+			<forward name="error" path="/RegisterUser.jsp" />
 
 		</action>
 

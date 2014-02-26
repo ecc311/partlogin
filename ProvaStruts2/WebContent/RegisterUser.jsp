@@ -25,13 +25,19 @@
 <html:text property="age" size="20" />
 		<br/>
 		<bean:message key="label.user.pwd" /> : 
-<html:text property="pwd" size="20" />
+<html:password property="pwd" size="20" />
 		<br />
 		<bean:message key="label.user.pwd2" /> : 
-<html:text property="pwd2" size="20" />
+<html:password property="pwd2" size="20" />
 		<br />
 		<bean:message key="label.user.email" /> : 
 <html:text property="email" size="20" />
+		<br />
+		<bean:message key="label.user.telephone" /> : 
+<html:text property="telephone" size="20" />
+		<br />
+		<bean:message key="label.user.compteb" /> : 
+<html:text property="compteb" size="20" />
 		<br />
 		<br />
 		<html:submit>

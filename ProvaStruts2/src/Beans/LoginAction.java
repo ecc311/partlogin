@@ -31,7 +31,7 @@ public class LoginAction extends Action {
     
    
     	LoginForm lf=(LoginForm) form;
-    	lf.getUsuari();
+
     	
     	
     	String clau;
@@ -42,9 +42,7 @@ public class LoginAction extends Action {
     	
     	for(int i=0;i<usuaris.size();i++)
     	{
-    		System.out.println(usuaris.get(i));
-    		System.out.println(lf.getUsuari());
-    		System.out.println(lf.getClau());
+
     		if (lf.getUsuari().equals(usuaris.get(i))){
     			
     			ok1=1;

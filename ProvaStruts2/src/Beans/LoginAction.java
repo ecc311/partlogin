@@ -9,6 +9,7 @@ import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionForm;
@@ -50,8 +51,8 @@ public class LoginAction extends Action {
     	}
     	if(ok1==1)
     	{
-    		clau=CarregarPassword(lf.getClau());
-    		System.out.println(lf.getClau());
+    		clau=CarregarPassword(lf.getUsuari());
+    		System.out.println("password="+lf.getClau()+" paswordnostre="+clau);
     		if(lf.getClau().equals(clau))
     		{
     			ok2=1;
@@ -59,8 +60,12 @@ public class LoginAction extends Action {
     	}
     	if(ok2==1)
     	{
+    		HttpSession sessio= request.getSession();
+    		sessio.setAttribute("usuari", lf.getUsuari());
     		return mapping.findForward("success");
     	}else{
+    		HttpSession sessioError = request.getSession();
+    		sessioError.setAttribute("fail", 1);
     		return mapping.findForward("error");
     	}	
     }
@@ -100,7 +105,6 @@ public class LoginAction extends Action {
 			aux.beforeFirst();
 			aux.next();
 			pass = aux.getString("pass");
-			System.out.println(pass);
 			conn.close();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
